@@ -1,0 +1,386 @@
+@import "mixins";
+
+.wrap {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+.m-height-full{
+  height: calc(100vh - (#{$height + $border-height} * 2));
+}
+
+.content {
+  @include transition-def();
+}
+
+p, h1, h2, h3, h4, span, input, img {
+  &::selection {
+    background: $yellow; /* Safari */
+    color: #000;
+  }
+  &::-moz-selection {
+    background: $yellow; /* Firefox */
+    color: #000;
+  }
+}
+
+.t-pink {
+  color: $pink !important;
+}
+
+// todo Buttons
+.b-button {
+  height: 36px;
+  background-color: $yellow;
+  padding: 0 15px;
+  min-width: 144px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: lowercase;
+  border-radius: 4px;
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  @include transition-def();
+  z-index: 2;
+  @include shadow-def();
+  .e-button-container {
+    height: 100%;
+    position: relative;
+  }
+  &:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  .t {
+    position: relative;
+  }
+  &:hover {
+    background-color: $yellow-h;
+    @include shadow-def-h();
+  }
+  &.m-100 {
+    width: 100%;
+  }
+}
+
+.b-bg {
+  .e-bg-img-container {
+    &:before {
+      background: rgba(0,0,0,.5);
+    }
+  }
+}
+
+.b-logo {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 35px;
+  line-height: 35px;
+  color: $yellow;
+  @include transition-def();
+  font-family: "Biotec";
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  &:hover {
+    color: $yellow-h;
+  }
+}
+
+h2, .b-title {
+  font-weight: 500;
+  font-family: "OpenSans";
+  font-size: 34px;
+  line-height: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+h4, .b-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  position: relative;
+  margin: 0 auto;
+  width: 54%;
+  padding-bottom: 67px;
+  padding-top: 0;
+  text-align: center;
+  color: #acacac;
+}
+
+.b-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section {
+  position: relative;
+}
+
+.b-input {
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  border: none;
+  font-family: "Roboto";
+  background-color: #fff;
+  padding: 14px;
+  letter-spacing: 0.8px;
+  color: $blue;
+  box-shadow: 1px 1.732px 4px 0px rgba(0, 0, 2, 0.4);
+}
+
+.b-header-auth {
+  cursor: pointer;
+  height: 100%;
+  .e-header-auth {
+    &.m-header-auth-sing-out {
+      display: none;
+    }
+    height: 100%;
+    position: relative;
+    padding-left: 25px;
+    color: $yellow;
+    @include transition-def();
+    &:hover {
+      color: $yellow-h;
+    }
+  }
+  .e-header-auth-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .c {
+    text-align: left;
+  }
+  .b-icon {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+    font-size: 20px;
+  }
+  &.active {
+    .header-auth {
+      &.m-header-auth-sing-in {
+        display: none;
+      }
+      &.m-header-auth-sing-out {
+        display: block;
+      }
+    }
+  }
+}
+
+.b-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: $border-height solid #fff;
+}
+
+.b-nav {
+  height: $height;
+  .e-nav-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .e-nav-item {
+    height: 100%;
+  }
+  .e-nav-link {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: block;
+    @include transition-def();
+    padding: 0 15px;
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+    .e-nav-link-text{
+      display: inline-block;
+      vertical-align: top;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 100%;
+      height: 2px;
+      background-color: $yellow;
+      z-index: 1;
+      @include transition(all 1s);
+      opacity: 0;
+      visibility: hidden;
+    }
+    &.active {
+      color: $yellow;
+      &:before {
+        right: 0;
+        background-color: $yellow;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.b-footer{
+  border-top: $border-height solid #fff;
+  .e-footer-container{
+    height: $height;
+    @include clearfix();
+    color: #fff;
+  }
+  .e-footer-right,.e-footer-left{
+    height: 100%;
+  }
+  .e-footer-left{
+    float: left;
+  }
+  .e-footer-right{
+    float: right;
+  }
+  .e-footer-text{
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.b-footer-social-list{
+  font-size: 0;
+  .e-footer-item{
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    color: #fff;
+    cursor: pointer;
+    @include transition-def();
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover{
+      color: $yellow;
+    }
+  }
+}
+
+.b-popup {
+  width: 500px;
+  display: inline-block;
+  .b-form {
+    padding: 30px;
+  }
+}
+
+.b-first-item{
+  .e-first-text{
+    font-size: 60px;
+    line-height: 63px;
+    top: 20px;
+    left: 30px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "CormorantInfant";
+    font-style:  normal;
+    font-weight: 500;
+    position: absolute;
+    animation-name:                    title_anim;
+    -webkit-animation-name:            title_anim;
+    @include transform(scale(1));
+    animation-duration:                5s;
+    -webkit-animation-duration:        5s;
+    animation-iteration-count:         infinite;
+    -webkit-animation-iteration-count: infinite;
+    color: #fff;
+    &.m-pos-1{
+      top: 40px;
+    }
+    &.m-pos-2{
+      top: 40px;
+      left: 80px;
+    }
+    &.m-pos-3{
+      top: 200px;
+      left: 120px;
+    }
+    &.m-pos-4{
+      bottom: 20px;
+      right: 80px;
+      top: auto;
+      left: auto;
+    }
+    &.m-pos-5{
+      bottom: 200px;
+      right: 120px;
+      top: auto;
+      left: auto;
+    }
+    &.m-pos-6{
+      bottom: 100px;
+      right: 300px;
+      top: auto;
+      left: auto;
+    }
+  }
+  .e-first-container{
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+  }
+}
+
+@keyframes title_anim{
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: $yellow;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+
+@media (max-width: 1260px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 479px) {
+
+}
