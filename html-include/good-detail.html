@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/head.html')
+<body>
+<div class="wrap">
+  <div class="content">
+    @@include('components/popups.html')
+    @@include('components/header.html')
+    <div class="b-good-full-container">
+      <div class="e-good-full-left">
+        <div class="b-gallery-global">
+          <div class="b-photo-list-container swiper-container gallery-top">
+            <ul class="b-photo-list swiper-wrapper">
+              <li class="e-photo-item swiper-slide" style="background-image: url('../img/k1.jpg')">
+                <a rel="group" href="../img/k1.jpg" class="fancybox"></a>
+              </li>
+              <li class="e-photo-item swiper-slide" style="background-image: url('../img/k2.jpg')">
+                <a rel="group" href="../img/k2.jpg" class="fancybox"></a>
+              </li>
+              <li class="e-photo-item swiper-slide"style="background-image: url('../img/k3.jpg')">
+                <a rel="group" href="../img/k3.jpg" class="fancybox"></a>
+              </li>
+            </ul>
+            <button class="b-button-arrow m-button-arrow-left js-arrow-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <button class="b-button-arrow m-button-arrow-right js-arrow-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          </div>
+          <div class="b-trumb-list-container swiper-container gallery-thumbs">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide" style="background-image: url('../img/k1.jpg')"></li>
+              <li class="swiper-slide" style="background-image: url('../img/k2.jpg')"></li>
+              <li class="swiper-slide" style="background-image: url('../img/k3.jpg')"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="e-good-full-right">
+        <div class="b-global-container">
+          <div class="e-global-container-content">
+            <div class="e-good-full-desc">
+              <h1 class="b-global-title">Frappoli 20130</h1>
+              <p class="b-desc-short">
+                <span class="e-desc-part m-desc-part-left">Страна производитель:</span>
+                <span class="e-desc-part">Украина</span>
+              </p>
+              <p class="b-desc-short">
+                <span class="e-desc-part m-desc-part-left">Материал:</span>
+                <span class="e-desc-part">100% катон, кусок кожи, замша, вата, нитка, волос швеи</span>
+              </p>
+              <p class="b-cost">945 <span class="e-cost-cur">грн.</span></p>
+              <form action="submit">
+                <ul class="b-size-list">
+                  <li class="e-size-item">
+                    <div class="b-size">
+                      <input type="radio" id="m" name="size">
+                      <label for="m" class="e-size-label">m</label>
+                    </div>
+                  </li>
+                  <li class="e-size-item">
+                    <div class="b-size">
+                      <input type="radio" id="l" name="size">
+                      <label for="l" class="e-size-label">l</label>
+                    </div>
+                  </li>
+                  <li class="e-size-item">
+                    <div class="b-size">
+                      <input type="radio" id="xl" name="size">
+                      <label for="xl" class="e-size-label">xl</label>
+                    </div>
+                  </li>
+                  <li class="e-size-item">
+                    <div class="b-size">
+                      <input type="radio" id="xxl" name="size">
+                      <label for="xxl" class="e-size-label">xxl</label>
+                    </div>
+                  </li>
+                  <li class="e-size-item">
+                    <div class="b-size">
+                      <input type="radio" id="xxxl" name="size">
+                      <label for="xxxl" class="e-size-label">xxxl</label>
+                    </div>
+                  </li>
+                </ul>
+                <button class="b-button m-button-big anim">
+                  <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Добавить в корзину</span></span></span></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('components/footer.html')
+</div>
+
+</body>
+</html>

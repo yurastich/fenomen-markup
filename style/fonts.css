@@ -45,6 +45,28 @@
 }
 
 @font-face {
+    font-family: "OpenSans";
+    src:         url("../fonts/OpenSans-Italic.eot");
+    src:         url("../fonts/OpenSans-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-Italic.woff") format("woff"),
+    url("../fonts/OpenSans-Italic.ttf") format("truetype"),
+    url("../fonts/OpenSans-Italic.svg") format("svg");
+    font-style:  italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src:         url("../fonts/OpenSans-BoldItalic.eot");
+    src:         url("../fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-BoldItalic.woff") format("woff"),
+    url("../fonts/OpenSans-BoldItalic.ttf") format("truetype"),
+    url("../fonts/OpenSans-BoldItalic.svg") format("svg");
+    font-style:  italic;
+    font-weight: 700;
+}
+
+@font-face {
     font-family: "Biotec";
     src:         url("../fonts/Biortec Regular.eot");
     src:         url("../fonts/Biortec Regular.eot?#iefix") format("embedded-opentype"),
