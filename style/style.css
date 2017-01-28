@@ -591,6 +591,7 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h
     min-width: 200px;
     font-weight: 700;
     font-size: 30px;
+    line-height: 30px;
     padding: 0 30px; }
   .b-button.m-100 {
     width: 100%; }
