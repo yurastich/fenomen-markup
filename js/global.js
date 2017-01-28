@@ -28,7 +28,7 @@ $(document).ready(function () {
         centeredSlides: true,
         slidesPerView: 'auto',
         touchRatio: 0.2,
-        slideToClickedSlide: true
+        slideToClickedSlide: true,
     });
 
     galleryTop.params.control = galleryThumbs;
