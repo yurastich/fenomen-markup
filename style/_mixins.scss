@@ -3,6 +3,7 @@ $grey: #717171;
 $grey-light: #565656;
 $grey-lighter: #8c8c8c;
 $grey-bg: #f3f3f3;
+$placeholder: #aeaeae;
 $yellow: rgb(254, 221, 2);
 $yellow-h: rgb(254, 238, 0);
 $red: rgb(96%, 1%, 2%);
@@ -16,6 +17,24 @@ $pink: #ff2c2c;
 
 $height: 60px;
 $border-height: 2px;
+$header-height: calc(#{$height + $border-height});
+$footer-height: $header-height;
+$height-content: calc(100vh - (#{$header-height} * 2));
+
+$full-hd: 1920px;
+
+@mixin block-style{
+  border-radius: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0px 3px 20px 0px rgba(255, 255, 255, .5);
+  @include transition-def();
+  box-sizing: border-box;
+  background-color: #000;
+  &:hover {
+    border-color: $yellow;
+    box-shadow: 0px 3px 20px 0px $yellow;
+  }
+}
 
 body, ul, p, h1, h2, h3, h4, a, button {
   margin:          0;

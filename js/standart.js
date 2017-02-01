@@ -56,6 +56,27 @@ $(document).ready(function () {
     }
   };
 
+  $("input").each(function () {
+    var valNow = $(this).val(),
+      par = $(this).closest(".b-input-container");
+    if (valNow == "") {
+      par.removeClass("m-full");
+    } else {
+      par.addClass("m-full");
+    }
+  });
+
+  $("input").blur(function () {
+    var valNow = $(this).val(),
+      par = $(this).closest(".b-input-container");
+    if (valNow == "") {
+      par.removeClass("m-full");
+    } else {
+      par.addClass("m-full");
+    }
+
+  });
+
 
   $(window).resize(function () {
 

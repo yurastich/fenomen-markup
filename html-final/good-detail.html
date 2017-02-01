@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="../style/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.mCustomScrollbar.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="../style/magnify.css">
   <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
@@ -21,7 +22,49 @@
 <button class="b-close m-close-glob"></button>
 <div class="b-popup-overlay" data-modal="1">
   <div class="e-popup-overlay-container">
-    <img src="img/ser1.png" alt="">
+    <div class="b-popup">
+      <p class="e-popup-title">Вход</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f" type="text" class="b-input">
+          <label for="f" class="b-label">Логин или email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f1" type="password" class="b-input">
+          <label for="f1" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">Вы впервые на нашем сайте? <span class="b-link" data-button="2">Зарегистрируйтесь</span></p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Войти</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-popup-overlay" data-modal="2">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Регистрация</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f2" type="text" class="b-input">
+          <label for="f2" class="b-label">Логин</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f4" type="email" class="b-input">
+          <label for="f4" class="b-label">Email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f3" type="password" class="b-input">
+          <label for="f3" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">На указанный email будут приходить персональные акции</p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Зарегистрироваться</span></span></span></span>
+        </button>
+      </form>
+    </div>
   </div>
 </div>
     <ul class="b-all-pages">
@@ -89,7 +132,7 @@
               </span>
                   </a>
                 </li>
-                <li class="e-nav-item">
+                <li class="e-nav-item" data-button="1">
                   <div class="t">
                     <div class="c">
                       <div class="b-header-auth">
@@ -124,25 +167,37 @@
         <div class="b-gallery-global">
           <div class="b-photo-list-container swiper-container gallery-top">
             <ul class="b-photo-list swiper-wrapper">
-              <li class="e-photo-item swiper-slide" style="background-image: url('../img/k1.jpg')">
-                <a rel="group" href="../img/k1.jpg" class="fancybox"></a>
+              <li class="e-photo-item swiper-slide">
+                <div class="t">
+                  <div class="c">
+                    <div class="b-zoom">
+                      <img src="../img/k1.jpg" alt="" class="e-zoom-img zoom" data-magnify-src="../img/k1b.jpg">
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="e-photo-item swiper-slide" style="background-image: url('../img/k2.jpg')">
-                <a rel="group" href="../img/k2.jpg" class="fancybox"></a>
+              <li class="e-photo-item swiper-slide">
+                <div class="t">
+                  <div class="c">
+                    <div class="b-zoom">
+                      <img src="../img/k2.jpg" alt="" class="e-zoom-img zoom" data-magnify-src="../img/k2b.jpg">
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="e-photo-item swiper-slide" style="background-image: url('../img/k3.jpg')">
-                <a rel="group" href="../img/k3.jpg" class="fancybox"></a>
+              <li class="e-photo-item swiper-slide">
+                <div class="t">
+                  <div class="c">
+                    <div class="b-zoom">
+                      <img src="../img/k3.jpg" alt="" class="e-zoom-img zoom" data-magnify-src="../img/k3b.jpg">
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
             <button class="b-button-arrow m-button-arrow-left js-arrow-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
             <button class="b-button-arrow m-button-arrow-right js-arrow-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-          </div>
-          <div class="b-trumb-list-container swiper-container gallery-thumbs">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide" style="background-image: url('../img/k1.jpg')"></li>
-              <li class="swiper-slide" style="background-image: url('../img/k2.jpg')"></li>
-              <li class="swiper-slide" style="background-image: url('../img/k3.jpg')"></li>
-            </ul>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -159,40 +214,98 @@
                 <span class="e-desc-part m-desc-part-left">Материал:</span>
                 <span class="e-desc-part">100% катон, кусок кожи, замша, вата, нитка, волос швеи</span>
               </p>
+              <p class="b-desc-short">
+                <span class="e-desc-part m-desc-part-left">На складе осталось:</span>
+                <span class="e-desc-part"><span class="t-num js-stock-num">6</span> шт.</span>
+              </p>
+              <p class="b-desc-short">
+                <span class="e-desc-part m-desc-part-left">Сейчас на станице:</span>
+                <span class="e-desc-part"><span class="t-num js-men-num">5</span> <i class="fa fa-male" aria-hidden="true"></i></span>
+              </p>
               <p class="b-cost">945 <span class="e-cost-cur">грн.</span></p>
-              <form action="submit">
-                <ul class="b-size-list">
-                  <li class="e-size-item">
-                    <div class="b-size">
-                      <input type="radio" id="m" name="size">
-                      <label for="m" class="e-size-label">m</label>
-                    </div>
-                  </li>
-                  <li class="e-size-item">
-                    <div class="b-size">
-                      <input type="radio" id="l" name="size">
-                      <label for="l" class="e-size-label">l</label>
-                    </div>
-                  </li>
-                  <li class="e-size-item">
-                    <div class="b-size">
-                      <input type="radio" id="xl" name="size">
-                      <label for="xl" class="e-size-label">xl</label>
-                    </div>
-                  </li>
-                  <li class="e-size-item">
-                    <div class="b-size">
-                      <input type="radio" id="xxl" name="size">
-                      <label for="xxl" class="e-size-label">xxl</label>
-                    </div>
-                  </li>
-                  <li class="e-size-item">
-                    <div class="b-size">
-                      <input type="radio" id="xxxl" name="size">
-                      <label for="xxxl" class="e-size-label">xxxl</label>
-                    </div>
-                  </li>
-                </ul>
+              <form class="b-form-good" action="submit">
+                <div class="e-form-good-desc">
+                  <ul class="b-size-list">
+                    <li class="e-size-item">
+                      <div class="b-size">
+                        <input type="radio" id="m" name="size">
+                        <label for="m" class="e-size-label">m</label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-size">
+                        <input type="radio" id="l" name="size">
+                        <label for="l" class="e-size-label">l</label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-size">
+                        <input type="radio" id="xl" name="size">
+                        <label for="xl" class="e-size-label">xl</label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-size">
+                        <input type="radio" id="xxl" name="size">
+                        <label for="xxl" class="e-size-label">xxl</label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-size">
+                        <input type="radio" id="xxxl" name="size">
+                        <label for="xxxl" class="e-size-label">xxxl</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="b-size-list">
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m1" name="color">
+                        <label for="m1" class="e-color-label" style="background-color: #7a99e9"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m12" name="color">
+                        <label for="m12" class="e-color-label" style="background-color: #7ae8e9"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m13" name="color">
+                        <label for="m13" class="e-color-label" style="background-color: #000000"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m14" name="color">
+                        <label for="m14" class="e-color-label" style="background-color: #ffffff"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m15" name="color">
+                        <label for="m15" class="e-color-label" style="background-color: #6f5225"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m16" name="color">
+                        <label for="m16" class="e-color-label" style="background-color: #ff8a00"></label>
+                      </div>
+                    </li>
+                    <li class="e-size-item">
+                      <div class="b-color">
+                        <input type="radio" id="m17" name="color">
+                        <label for="m17" class="e-color-label" style="background-color: #d9d9d9"></label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="b-input-container">
+                    <input id="f" type="text" class="b-input">
+                    <label for="f" class="b-label">Введите промо-код</label>
+                  </div>
+                </div>
                 <button class="b-button m-button-big anim">
                   <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Добавить в корзину</span></span></span></span>
                 </button>
@@ -249,8 +362,11 @@
 <script src="../js/standart.js"></script>
 <script src="../js/popup.js"></script>
 <script src="../js/swiper.min.js"></script>
+<!--<script src="../js/map.js"></script>-->
 <script src="../js/jquery.fancybox.pack.js"></script>
-<script src="../js/jquery.mCustomScrollbar.js"></script>
+<script src="../js/jquery.magnify.js"></script>
+<script src="../js/jquery.magnify-mobile.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../js/global.js"></script>
 </div>
 

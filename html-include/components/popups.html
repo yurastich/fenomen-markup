@@ -2,6 +2,48 @@
 <button class="b-close m-close-glob"></button>
 <div class="b-popup-overlay" data-modal="1">
   <div class="e-popup-overlay-container">
-    <img src="img/ser1.png" alt="">
+    <div class="b-popup">
+      <p class="e-popup-title">Вход</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f" type="text" class="b-input">
+          <label for="f" class="b-label">Логин или email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f1" type="password" class="b-input">
+          <label for="f1" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">Вы впервые на нашем сайте? <span class="b-link" data-button="2">Зарегистрируйтесь</span></p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Войти</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-popup-overlay" data-modal="2">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Регистрация</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f2" type="text" class="b-input">
+          <label for="f2" class="b-label">Логин</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f4" type="email" class="b-input">
+          <label for="f4" class="b-label">Email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f3" type="password" class="b-input">
+          <label for="f3" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">На указанный email будут приходить персональные акции</p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Зарегистрироваться</span></span></span></span>
+        </button>
+      </form>
+    </div>
   </div>
 </div>

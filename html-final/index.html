@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="../style/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.mCustomScrollbar.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="../style/magnify.css">
   <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
@@ -21,7 +22,49 @@
 <button class="b-close m-close-glob"></button>
 <div class="b-popup-overlay" data-modal="1">
   <div class="e-popup-overlay-container">
-    <img src="img/ser1.png" alt="">
+    <div class="b-popup">
+      <p class="e-popup-title">Вход</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f" type="text" class="b-input">
+          <label for="f" class="b-label">Логин или email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f1" type="password" class="b-input">
+          <label for="f1" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">Вы впервые на нашем сайте? <span class="b-link" data-button="2">Зарегистрируйтесь</span></p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Войти</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-popup-overlay" data-modal="2">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Регистрация</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f2" type="text" class="b-input">
+          <label for="f2" class="b-label">Логин</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f4" type="email" class="b-input">
+          <label for="f4" class="b-label">Email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f3" type="password" class="b-input">
+          <label for="f3" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">На указанный email будут приходить персональные акции</p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Зарегистрироваться</span></span></span></span>
+        </button>
+      </form>
+    </div>
   </div>
 </div>
     <ul class="b-all-pages">
@@ -89,7 +132,7 @@
               </span>
                   </a>
                 </li>
-                <li class="e-nav-item">
+                <li class="e-nav-item" data-button="1">
                   <div class="t">
                     <div class="c">
                       <div class="b-header-auth">
@@ -120,74 +163,225 @@
       </div>
     </header>
 
-    <section class="b-first swiper-container">
-        <ul class="b-first-slider swiper-wrapper">
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+    <div class="b-global-container b-slider-fix-scroll">
+      <div class="e-global-container-content">
+        <section class="b-first swiper-container">
+          <ul class="b-first-slider swiper-wrapper">
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p18.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-3" data-swiper-parallax="-100">Качественный товар</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-3" data-swiper-parallax="-100">Качественный товар</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p13.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-4" data-swiper-parallax="-100">Быстрая доставка</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-4" data-swiper-parallax="-100">Быстрая доставка</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p10.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-5" data-swiper-parallax="-100">Низкие цены</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-5" data-swiper-parallax="-100">Низкие цены</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p15.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-1" data-swiper-parallax="-100">Гарантия качества</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-1" data-swiper-parallax="-100">Гарантия качества</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p11.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-6" data-swiper-parallax="-100">Ежемесячные акции</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-6" data-swiper-parallax="-100">Ежемесячные акции</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p9.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-4" data-swiper-parallax="-100">Удобное размещение</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-4" data-swiper-parallax="-100">Удобное размещение</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="e-first-item swiper-slide">
-            <div class="b-first-item b-bg">
+            </li>
+            <li class="e-first-item swiper-slide">
+              <div class="b-first-item b-bg">
       <span class="e-bg-img-container"><span class="e-bg-img"
                                              style="background-image: url('../img/p2.jpg')"></span></span>
-              <div class="e-first-container m-height-full">
-                <span class="e-first-text m-pos-5" data-swiper-parallax="-100">Стильный интерьер</span>
+                <div class="e-first-container m-height-full">
+                  <span class="e-first-text m-pos-5" data-swiper-parallax="-100">Стильный интерьер</span>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </section>
+        <div class="b-empty-screen"></div>
+        <div class="e-slider-fix-scroll-container">
+          <div class="e-slider-fix-scroll-container-bg">
+            <div class="container">
+              <h1 class="b-text-logo">fenomen</h1>
+              <p class="b-text">Мы - молодой мужской магазин одежды с современным видом на моду.</p>
+              <p class="b-text">Для нас важен каждый клиент и мы постоянно расширяемся, открывая новые точки и еженедельно обновляя ассортимент.</p>
+              <div class="row">
+                <div class="col-lg-4">
+                  <h2 class="b-title">Категории товаров</h2>
+                  <ul class="b-text-list">
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Куртки</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Джинсы</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Штаны</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Ремни</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Кофты</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Свитера</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Шапки</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Футболки</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Поло</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Майки</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Шорты</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Рубашки</a>
+                    </li>
+                    <li class="e-text-item">
+                      <a href="" class="b-link">Носки</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-8">
+                  <h2 class="b-title">Акции</h2>
+                  <ul class="b-goods-list row">
+                    <li class="e-goods-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div class="b-goods">
+                        <a href="#" class="e-goods-img-container">
+                          <img src="../img/k1.jpg" class="e-goods-img">
+                        </a>
+                        <div class="e-goods-content">
+                          <span class="b-cost-share">
+                            <span class="e-cost-share-text">
+                              845 <span class="e-cost-cur">грн.</span>
+                            </span>
+                          <span class="b-cost">945 <span class="e-cost-cur">грн.</span></span>
+                          </span>
 
-      </section>
+                          <p class="e-goods-text">Frappoli 20130</p>
+                          <div class="e-goods-content-button">
+                            <a href="" class="b-button anim">
+                              <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Подробнее</span></span></span></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="e-goods-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div class="b-goods">
+                        <a href="#" class="e-goods-img-container">
+                          <img src="../img/k2.jpg" class="e-goods-img">
+                        </a>
+                        <div class="e-goods-content">
+                          <span class="b-cost-share">
+                            <span class="e-cost-share-text">
+                              8435 <span class="e-cost-cur">грн.</span>
+                            </span>
+                          <span class="b-cost">9345 <span class="e-cost-cur">грн.</span></span>
+                          </span>
+                          <p class="e-goods-text">Frappoli 20130</p>
+                          <div class="e-goods-content-button">
+                            <a href="" class="b-button anim">
+                              <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Подробнее</span></span></span></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="e-goods-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div class="b-goods">
+                        <a href="#" class="e-goods-img-container">
+                          <img src="../img/k1.jpg" class="e-goods-img">
+                        </a>
+                        <div class="e-goods-content">
+                          <span class="b-cost-share">
+                            <span class="e-cost-share-text">
+                              8454 <span class="e-cost-cur">грн.</span>
+                            </span>
+                          <span class="b-cost">9435 <span class="e-cost-cur">грн.</span></span>
+                          </span>
+                          <p class="e-goods-text">Frappoli 20130</p>
+                          <div class="e-goods-content-button">
+                            <a href="" class="b-button anim">
+                              <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Подробнее</span></span></span></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="e-goods-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div class="b-goods">
+                        <a href="#" class="e-goods-img-container">
+                          <img src="../img/k3.jpg" class="e-goods-img">
+                        </a>
+                        <div class="e-goods-content">
+                          <span class="b-cost-share">
+                            <span class="e-cost-share-text">
+                              84514 <span class="e-cost-cur">грн.</span>
+                            </span>
+                          <span class="b-cost">94335 <span class="e-cost-cur">грн.</span></span>
+                          </span>
+                          <p class="e-goods-text">Catch 20134130</p>
+                          <div class="e-goods-content-button">
+                            <a href="" class="b-button anim">
+                              <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Подробнее</span></span></span></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="b-empty-screen"></div>
+      </div>
+    </div>
 
   </div>
 
@@ -236,8 +430,11 @@
 <script src="../js/standart.js"></script>
 <script src="../js/popup.js"></script>
 <script src="../js/swiper.min.js"></script>
+<!--<script src="../js/map.js"></script>-->
 <script src="../js/jquery.fancybox.pack.js"></script>
-<script src="../js/jquery.mCustomScrollbar.js"></script>
+<script src="../js/jquery.magnify.js"></script>
+<script src="../js/jquery.magnify-mobile.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../js/global.js"></script>
 </div>
 

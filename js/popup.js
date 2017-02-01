@@ -5,6 +5,7 @@ $(document).ready(function () {
     var popup = $(".b-popup-overlay");
 
     $("[data-button]").click(function () {
+      $(".b-popup-overlay.active").removeClass("active");
       var popupNum = $(this).data("button");
       $("[data-modal='" + popupNum + "']").addClass("active").animate({
         "opacity": 1

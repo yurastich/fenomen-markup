@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="../style/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.mCustomScrollbar.css">
   <link rel="stylesheet" type="text/css" href="../style/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="../style/magnify.css">
   <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
@@ -21,7 +22,49 @@
 <button class="b-close m-close-glob"></button>
 <div class="b-popup-overlay" data-modal="1">
   <div class="e-popup-overlay-container">
-    <img src="img/ser1.png" alt="">
+    <div class="b-popup">
+      <p class="e-popup-title">Вход</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f" type="text" class="b-input">
+          <label for="f" class="b-label">Логин или email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f1" type="password" class="b-input">
+          <label for="f1" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">Вы впервые на нашем сайте? <span class="b-link" data-button="2">Зарегистрируйтесь</span></p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Войти</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-popup-overlay" data-modal="2">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Регистрация</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f2" type="text" class="b-input">
+          <label for="f2" class="b-label">Логин</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f4" type="email" class="b-input">
+          <label for="f4" class="b-label">Email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f3" type="password" class="b-input">
+          <label for="f3" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">На указанный email будут приходить персональные акции</p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Зарегистрироваться</span></span></span></span>
+        </button>
+      </form>
+    </div>
   </div>
 </div>
     <ul class="b-all-pages">
@@ -89,7 +132,7 @@
               </span>
                   </a>
                 </li>
-                <li class="e-nav-item">
+                <li class="e-nav-item" data-button="1">
                   <div class="t">
                     <div class="c">
                       <div class="b-header-auth">
@@ -119,15 +162,7 @@
         </div>
       </div>
     </header>
-    <div class="b-global-container">
-      <div class="e-global-container-content">
-        <div class="container">
-          <h1 class="b-text-logo">fenomen</h1>
-          <p class="b-text">Мы - молодой магазин одежды с современным видом на моду.</p>
-          <p class="b-text">Для нас важен каждый клиент и мы постоянно расширяемся, открывая новые точки и еженедельно обновляя ассортимент.</p>
-        </div>
-      </div>
-    </div>
+
   </div>
 
   <footer class="b-footer">
@@ -175,8 +210,11 @@
 <script src="../js/standart.js"></script>
 <script src="../js/popup.js"></script>
 <script src="../js/swiper.min.js"></script>
+<!--<script src="../js/map.js"></script>-->
 <script src="../js/jquery.fancybox.pack.js"></script>
-<script src="../js/jquery.mCustomScrollbar.js"></script>
+<script src="../js/jquery.magnify.js"></script>
+<script src="../js/jquery.magnify-mobile.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="../js/global.js"></script>
 </div>
 
