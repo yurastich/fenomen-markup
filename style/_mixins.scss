@@ -25,7 +25,8 @@ $full-hd: 1920px;
 
 @mixin block-style{
   border-radius: 12px;
-  border: 2px solid #fff;
+  border: 2px solid;
+  border-color: #fff;
   box-shadow: 0px 3px 20px 0px rgba(255, 255, 255, .5);
   @include transition-def();
   box-sizing: border-box;
@@ -34,6 +35,14 @@ $full-hd: 1920px;
     border-color: $yellow;
     box-shadow: 0px 3px 20px 0px $yellow;
   }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 body, ul, p, h1, h2, h3, h4, a, button {
@@ -355,17 +364,17 @@ html {
 
 // todo Elements
 .b-close {
-  width:  42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
   z-index: 9999;
   &:before, &:after {
     content:          "";
     position:         absolute;
-    top:              -3px;
+    top:              -6px;
     left:             16px;
     width:            3px;
     height:           48px;
@@ -592,7 +601,7 @@ html {
   &.active {
     display: block;
   }
-  & > .b-close {
+  & + .b-close {
     position: fixed !important;
     top:      10px;
     left:     auto;

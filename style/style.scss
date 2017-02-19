@@ -148,11 +148,12 @@ section {
   line-height: 18px;
   font-weight: 400;
   font-family: "Ubuntu";
-  padding: 11px;
+  padding: 1px 10px 7px;
   letter-spacing: 0.8px;
   color: #fff;
   box-shadow: 1px 1.732px 4px 0px rgba(0, 0, 2, 0.4);
-  border: 2px solid #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
   background-color: transparent;
   @include transition-def();
   &:focus{
@@ -170,13 +171,12 @@ section {
 .b-input-container{
   padding-top: 20px;
   position: relative;
-  margin-top: 15px;
   &+.b-input-container{
     margin-top: 15px;
   }
   .b-label{
     position: absolute;
-    top: 33px;
+    top: 17px;
     left: 13px;
   }
   &.m-full {
@@ -265,7 +265,7 @@ section {
 }
 
 .b-header {
-  z-index: 1;
+  z-index: 4;
   border-bottom: $border-height solid #fff;
   position: relative;
 }
@@ -282,6 +282,24 @@ section {
   }
   .e-nav-item {
     height: 100%;
+    position: relative;
+    &:hover{
+      .b-nav-sub-menu-container{
+        @include transform(translateY(0px));
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .b-nav-sub-menu-container{
+      position: absolute;
+      left: calc(50% - 150px);
+      top: 100%;
+      z-index: 4;
+      @include transform(translateY(20px));
+      opacity: 0;
+      visibility: hidden;
+      @include transition-def();
+    }
   }
   .e-nav-link {
     position: relative;
@@ -297,6 +315,9 @@ section {
     .e-nav-link-text {
       display: inline-block;
       vertical-align: top;
+    }
+    .e-nav-link-icon{
+      padding-right: 5px;
     }
     &:before {
       content: "";
@@ -401,24 +422,34 @@ section {
   z-index: 6;
 }
 
-.b-global-container {
-  overflow: auto;
-  @extend .m-height-full;
-  .mCSB_container {
-    margin: 0;
-  }
-  .mCSB_scrollTools {
-    margin: 15px 0;
-    opacity: 1;
-    z-index: 5;
-
-    .mCSB_dragger{
-      .mCSB_dragger_bar {
+// scroll style
+.mCSB_container {
+  margin: 0;
+}
+.mCSB_scrollTools {
+  margin: 15px 0;
+  opacity: 1;
+  z-index: 5;
+  .mCSB_dragger{
+    .mCSB_dragger_bar {
+      background-color: $yellow !important;
+    }
+    &:hover{
+      .mCSB_dragger_bar{
         background-color: $yellow;
       }
     }
-
   }
+}
+.mCSB_inside{
+  &> .mCSB_container{
+    margin: 0;
+  }
+}
+
+.b-global-container {
+  overflow: auto;
+  @extend .m-height-full;
   .e-global-container-content {
     padding: 30px 0;
   }
@@ -522,6 +553,15 @@ section {
     font-size: 20px;
     font-style: italic;
   }
+  &.m-cost-big{
+    font-size: 66px;
+    line-height: 70px;
+    text-align: right;
+    padding-top: 20px;
+    .e-cost-cur {
+      font-size: 20px;
+    }
+  }
 }
 
 .b-cost-share{
@@ -597,13 +637,9 @@ section {
       }
     }
     .e-goods-text {
-      display: block;
       font-size: 20px;
       line-height: 24px;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 100%;
-      text-overflow: ellipsis;
+      @include ellipsis();
     }
   }
   .e-goods-content-button {
@@ -673,15 +709,6 @@ section {
   .e-good-full-desc {
     .b-global-title {
       text-align: left;
-    }
-  }
-  .b-cost {
-    font-size: 66px;
-    line-height: 70px;
-    text-align: right;
-    padding-top: 20px;
-    .e-cost-cur {
-      font-size: 30px;
     }
   }
 }
@@ -989,6 +1016,182 @@ section {
     @include transform(scale(1));
     &:hover{
       border-color: $yellow;
+    }
+  }
+}
+
+.b-basket{
+  @include block-style;
+  padding: 20px;
+  box-sizing: border-box;
+  .e-basket-photo-container{
+    height: 200px;
+    overflow: hidden;
+  }
+  .e-basket-photo{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    max-height: 100%;
+    img{
+      max-height: 200px;
+      width: auto;
+    }
+  }
+  .e-basket-name{
+    @include ellipsis();
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .e-basket-text{
+    font-size: 20px;
+    line-height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 130px;
+  }
+  .b-size, .b-color, .b-count-block{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .e-basket-size, .e-basket-color{
+    padding-bottom: 10px;
+  }
+  .e-basket-description-container{
+    position: relative;
+  }
+  .e-basket-right-container{
+    position: relative;
+  }
+}
+
+.b-count-block{
+  font-size: 0;
+  text-align: left;
+  .e-count-button{
+    border: 2px solid #fff;
+    height: 44px;
+    width: 44px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    &:hover{
+      border-color: $yellow;
+      .e-count-icon{
+        color: $yellow;
+      }
+    }
+    .e-count-icon{
+      font-size: 30px;
+      position: absolute;
+      top: calc(50% - 15px);
+      width: 100%;
+      left: 0;
+      color: #fff;
+      @include transition-def();
+    }
+    &.m-count-button-left{
+      border-radius: 5px 0 0 5px;
+      &:hover{
+        .e-count-icon{
+          left: -3px;
+        }
+      }
+    }
+    &.m-count-button-right{
+      border-radius: 0 5px 5px 0;
+      &:hover{
+        .e-count-icon{
+          left: 3px;
+        }
+      }
+    }
+  }
+  .e-count-text{
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .b-input-container{
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+    .b-input{
+      text-align: center;
+      border: 2px solid #fff;
+      border-left: 0;
+      border-right: 0;
+      font-family: "Biotec";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 30px;
+      line-height: 30px;
+      padding: 2px 0;
+      color: $yellow;
+    }
+  }
+}
+
+.b-basket-list{
+  .e-basket-item{
+    margin-top: 15px;
+    @include transition-def();
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.b-close-container{
+  padding-right: 50px;
+  position: relative;
+}
+
+.b-nav-sub-menu-container{
+  width: 300px;
+  box-sizing: border-box;
+  @include block-style();
+  &:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid;
+    border-bottom-color: inherit;
+    bottom:100%;
+    left: calc(50% - 10px);
+  }
+  .b-scroll{
+    height: 300px;
+  }
+}
+
+.b-sub-menu{
+  .e-sub-menu-item{
+    border-top: 1px solid #fff;
+    &:first-child{
+      border: none;
+    }
+  }
+  .e-sub-menu-link{
+    padding: 15px 10px;
+    padding-right: 15px;
+    padding-left: 10px;
+    display: block;
+    color: #fff;
+    @include transition-def();
+
+    &:hover, &.active{
+      color: $yellow;
+      padding-left: 15px;
+      padding-right: 10px;
     }
   }
 }

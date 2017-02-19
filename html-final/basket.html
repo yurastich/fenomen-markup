@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fenomen</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../style/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../style/fonts.css">
+  <link rel="stylesheet" type="text/css" href="../style/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../style/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" type="text/css" href="../style/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="../style/magnify.css">
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="content">
+    <div class="b-overlay"></div>
+<button class="b-close m-close-glob"></button>
+<div class="b-popup-overlay" data-modal="1">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Вход</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f" type="text" class="b-input">
+          <label for="f" class="b-label">Логин или email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f1" type="password" class="b-input">
+          <label for="f1" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">Вы впервые на нашем сайте? <span class="b-link" data-button="2">Зарегистрируйтесь</span></p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Войти</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="b-popup-overlay" data-modal="2">
+  <div class="e-popup-overlay-container">
+    <div class="b-popup">
+      <p class="e-popup-title">Регистрация</p>
+      <form class="b-form" action="submit">
+        <div class="b-input-container">
+          <input id="f2" type="text" class="b-input">
+          <label for="f2" class="b-label">Логин</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f4" type="email" class="b-input">
+          <label for="f4" class="b-label">Email</label>
+        </div>
+        <div class="b-input-container">
+          <input id="f3" type="password" class="b-input">
+          <label for="f3" class="b-label">Пароль</label>
+        </div>
+        <p class="e-popup-desc">На указанный email будут приходить персональные акции</p>
+        <button type="submit" class="b-button anim">
+          <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Зарегистрироваться</span></span></span></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+    <ul class="b-all-pages">
+  <li class="e-all-pages-item">
+    <a href="index.html" class="e-all-pages-link">Главная</a>
+  </li>
+  <li class="e-all-pages-item">
+    <a href="basket.html" class="e-all-pages-link">Корзина</a>
+  </li>
+  <li class="e-all-pages-item">
+    <a href="goods-list.html" class="e-all-pages-link">Товары</a>
+  </li>
+  <li class="e-all-pages-item">
+    <a href="good-detail.html" class="e-all-pages-link">Товар детально</a>
+  </li>
+</ul>
+<header class="b-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <nav class="b-nav">
+          <ul class="e-nav-list">
+            <li class="e-nav-item">
+              <div class="t">
+                <div class="c">
+                  <a href="#" class="b-logo">
+                    <span class="e-logo-text">fenomen</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="e-nav-item">
+              <a href="#" class="e-nav-link">
+              <span class="t">
+                    <span class="c">
+                        <span class="e-nav-link-text">Главная</span>
+                    </span>
+              </span>
+              </a>
+            </li>
+            <li class="e-nav-item">
+              <a href="#" class="e-nav-link active">
+              <span class="t">
+                    <span class="c">
+                        <span class="e-nav-link-text">Товары</span>
+                    </span>
+              </span>
+              </a>
+              <div class="b-nav-sub-menu-container">
+                <div class="b-scroll">
+                  <ul class="b-sub-menu">
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Куртки</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Джинсы</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Штаны</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Ремни</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Кофты</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Свитера</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Шапки</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Футболки</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Поло</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Майки</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Шорты</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Рубашки</a>
+                    </li>
+                    <li class="e-sub-menu-item">
+                      <a href="" class="e-sub-menu-link">Носки</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+            <li class="e-nav-item">
+              <a href="#" class="e-nav-link">
+              <span class="t">
+                    <span class="c">
+                        <span class="e-nav-link-text">О нас</span>
+                    </span>
+              </span>
+              </a>
+            </li>
+            <li class="e-nav-item">
+              <a href="#" class="e-nav-link">
+              <span class="t">
+                    <span class="c">
+                        <span class="e-nav-link-text"><span class="e-nav-link-icon"><i class="fa fa-shopping-basket"
+                                                                                       aria-hidden="true"></i></span>Корзина</span>
+                    </span>
+              </span>
+              </a>
+            </li>
+            <li class="e-nav-item" data-button="1">
+              <div class="t">
+                <div class="c">
+                  <div class="b-header-auth">
+                    <div class="e-header-auth m-header-auth-sing-in">
+                      <div class="t">
+                        <div class="c">
+                          <span class="b-icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span>
+                          <span class="e-header-auth-text">Вход / Регистрация</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="e-header-auth m-header-auth-sing-out">
+                      <div class="t">
+                        <div class="c">
+                          <span class="b-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                          <span class="e-header-auth-text">Петр Епифанцев</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="b-global-container">
+      <div class="e-global-container-content">
+        <div class="container">
+          <h1 class="b-global-title">Корзина</h1>
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="b-basket-list">
+                <li class="e-basket-item">
+                  <div class="b-basket">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="e-basket-photo-container">
+                          <div class="t">
+                            <div class="c">
+                              <a href="good-detail.html" class="e-basket-photo">
+                                <img src="../img/k1.jpg" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="e-basket-description-container b-close-container">
+                          <a href="good-detail.html" class="e-basket-name">Frappoli 20130</a>
+                          <div class="e-basket-size">
+                            <span class="e-basket-text">Размер:</span>
+                            <div class="b-size">
+                              <input type="radio" id="xl" name="size" disabled>
+                              <label for="xl" class="e-size-label">xl</label>
+                            </div>
+                          </div>
+                          <div class="e-basket-color">
+                            <span class="e-basket-text">Цвет:</span>
+                            <div class="b-color">
+                              <input type="radio" id="m16" name="color" disabled>
+                              <label for="m16" class="e-color-label" style="background-color: #ff8a00"></label>
+                            </div>
+                          </div>
+                          <div class="e-basket-count">
+                            <span class="e-basket-text">Количество:</span>
+                            <div class="b-count-block">
+                              <button class="e-count-button m-count-button-left">
+                                <i class="e-count-icon fa fa-minus-square-o" aria-hidden="true"></i>
+                              </button>
+                              <div class="b-input-container">
+                                <input type="text" class="b-input" disabled value="1">
+                              </div>
+                              <button class="e-count-button m-count-button-right">
+                                <i class="e-count-icon fa fa-plus-square-o" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="b-close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="e-basket-item">
+                  <div class="b-basket">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="e-basket-photo-container">
+                          <div class="t">
+                            <div class="c">
+                              <a href="good-detail.html" class="e-basket-photo">
+                                <img src="../img/k2.jpg" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="e-basket-description-container b-close-container">
+                          <a href="good-detail.html" class="e-basket-name">Frappoli 20130</a>
+                          <div class="e-basket-size">
+                            <span class="e-basket-text">Размер:</span>
+                            <div class="b-size">
+                              <input type="radio" id="xl" name="size" disabled>
+                              <label for="xl" class="e-size-label">xll</label>
+                            </div>
+                          </div>
+                          <div class="e-basket-color">
+                            <span class="e-basket-text">Цвет:</span>
+                            <div class="b-color">
+                              <input type="radio" id="m16" name="color" disabled>
+                              <label for="m16" class="e-color-label" style="background-color: #ff8a00"></label>
+                            </div>
+                          </div>
+                          <div class="e-basket-count">
+                            <span class="e-basket-text">Количество:</span>
+                            <div class="b-count-block">
+                              <button class="e-count-button m-count-button-left">
+                                <i class="e-count-icon fa fa-minus-square-o" aria-hidden="true"></i>
+                              </button>
+                              <div class="b-input-container">
+                                <input type="text" class="b-input" disabled value="1">
+                              </div>
+                              <button class="e-count-button m-count-button-right">
+                                <i class="e-count-icon fa fa-plus-square-o" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="b-close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="e-basket-item">
+                  <div class="b-basket">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="e-basket-photo-container">
+                          <div class="t">
+                            <div class="c">
+                              <a href="good-detail.html" class="e-basket-photo">
+                                <img src="../img/k3.jpg" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="e-basket-description-container b-close-container">
+                          <a href="good-detail.html" class="e-basket-name">Frappoli 20130</a>
+                          <div class="e-basket-size">
+                            <span class="e-basket-text">Размер:</span>
+                            <div class="b-size">
+                              <input type="radio" id="xl" name="size" disabled>
+                              <label for="xl" class="e-size-label">xxxl</label>
+                            </div>
+                          </div>
+                          <div class="e-basket-color">
+                            <span class="e-basket-text">Цвет:</span>
+                            <div class="b-color">
+                              <input type="radio" id="m16" name="color" disabled>
+                              <label for="m16" class="e-color-label" style="background-color: #7a99e9"></label>
+                            </div>
+                          </div>
+                          <div class="e-basket-count">
+                            <span class="e-basket-text">Количество:</span>
+                            <div class="b-count-block">
+                              <button class="e-count-button m-count-button-left">
+                                <i class="e-count-icon fa fa-minus-square-o" aria-hidden="true"></i>
+                              </button>
+                              <div class="b-input-container">
+                                <input type="text" class="b-input" disabled value="2">
+                              </div>
+                              <button class="e-count-button m-count-button-right">
+                                <i class="e-count-icon fa fa-plus-square-o" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="b-close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="e-basket-item">
+                  <div class="b-basket">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="e-basket-photo-container">
+                          <div class="t">
+                            <div class="c">
+                              <a href="good-detail.html" class="e-basket-photo">
+                                <img src="../img/k2.jpg" alt="">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="e-basket-description-container b-close-container">
+                          <a href="good-detail.html" class="e-basket-name">Frappoli 20130</a>
+                          <div class="e-basket-size">
+                            <span class="e-basket-text">Размер:</span>
+                            <div class="b-size">
+                              <input type="radio" id="xl" name="size" disabled>
+                              <label for="xl" class="e-size-label">xl</label>
+                            </div>
+                          </div>
+                          <div class="e-basket-color">
+                            <span class="e-basket-text">Цвет:</span>
+                            <div class="b-color">
+                              <input type="radio" id="m16" name="color" disabled>
+                              <label for="m16" class="e-color-label" style="background-color: #7ae8e9"></label>
+                            </div>
+                          </div>
+                          <div class="e-basket-count">
+                            <span class="e-basket-text">Количество:</span>
+                            <div class="b-count-block">
+                              <button class="e-count-button m-count-button-left">
+                                <i class="e-count-icon fa fa-minus-square-o" aria-hidden="true"></i>
+                              </button>
+                              <div class="b-input-container">
+                                <input type="text" class="b-input" disabled value="20">
+                              </div>
+                              <button class="e-count-button m-count-button-right">
+                                <i class="e-count-icon fa fa-plus-square-o" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <button class="b-close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <form class="b-form" action="submit">
+                <div class="b-input-container">
+                  <input id="f54" type="text" class="b-input">
+                  <label for="f54" class="b-label">Имя</label>
+                </div>
+                <div class="b-input-container">
+                  <input id="f541" type="text" class="b-input">
+                  <label for="f541" class="b-label">Телефон</label>
+                </div>
+                <div class="b-input-container">
+                  <input id="f131" type="text" class="b-input">
+                  <label for="f131" class="b-label">Город</label>
+                </div>
+                <div class="b-input-container">
+                  <input id="f13" type="text" class="b-input">
+                  <label for="f13" class="b-label">Отделение новой почты</label>
+                </div>
+                <div class="b-input-container">
+                  <input id="f1231" type="text" class="b-input">
+                  <label for="f1231" class="b-label">Промо-код</label>
+                </div>
+                <p class="b-cost m-cost-big">24098 <span class="e-cost-cur">грн.</span></p>
+                <button type="submit" class="b-button m-button-big m-100 anim">
+                  <span class="t"><span class="c"><span class="e-button-container"><span class="e-button-text">Заказать</span></span></span></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="b-footer">
+  <div class="container">
+    <div class="row">
+      <div class="e-footer-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="e-footer-left">
+          <div class="t">
+            <div class="c">
+              <a href="#" class="e-footer-text">2017 © магазин "Fenomen"</a>
+            </div>
+          </div>
+        </div>
+        <div class="e-footer-right">
+          <div class="t">
+            <div class="c">
+              <ul class="b-footer-social-list">
+                <li class="e-footer-item">
+                  <a href="https://vk.com/fenomen_com" target="_blank" class="e-footer-social-link">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="e-footer-item">
+                  <a href="" target="_blank" class="e-footer-social-link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="e-footer-item">
+                  <a href="" target="_blank" class="e-footer-social-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/jquery-2.2.3.min.js"></script>
+
+
+<script src="../js/jquery.maskedinput.min.js"></script>
+<script src="../js/standart.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/swiper.min.js"></script>
+<!--<script src="../js/map.js"></script>-->
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/jquery.magnify.js"></script>
+<script src="../js/jquery.magnify-mobile.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/global.js"></script>
+</div>
+
+</body>
+</html>
