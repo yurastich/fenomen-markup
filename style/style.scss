@@ -10,6 +10,12 @@
   color: #fff;
 }
 
+.font{
+  font-family: "Biotec";
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: #000;
   overflow: hidden;
@@ -204,9 +210,7 @@ section {
   line-height: 35px;
   color: $yellow;
   @include transition-def();
-  font-family: "Biotec";
-  font-weight: 400;
-  font-style: normal;
+  @extend .font;
   cursor: pointer;
   &:hover {
     color: $yellow-h;
@@ -217,9 +221,7 @@ section {
   font-size: 45px;
   line-height: 48px;
   color: $yellow;
-  font-family: "Biotec";
-  font-weight: 400;
-  font-style: normal;
+  @extend .font;
   padding-bottom: 30px;
 }
 
@@ -1126,9 +1128,7 @@ section {
       border: 2px solid #fff;
       border-left: 0;
       border-right: 0;
-      font-family: "Biotec";
-      font-weight: 400;
-      font-style: normal;
+      @extend .font;
       font-size: 30px;
       line-height: 30px;
       padding: 2px 0;
@@ -1193,6 +1193,84 @@ section {
       padding-left: 15px;
       padding-right: 10px;
     }
+  }
+}
+
+.b-sf-list{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .e-sf-item{
+    margin-top: 20px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  .e-sf-item-s{
+    @include transition-def();
+    cursor: pointer;
+    &:hover{
+      color: $yellow;
+    }
+  }
+  .e-sf-item-f{
+    display: none;
+  }
+}
+
+.b-tel{
+  line-height: 24px;
+  padding-left: 50px;
+  position: relative;
+  @extend .font;
+  @include transition-def();
+  &:hover{
+    color: $yellow;
+  }
+  .e-tel-img-container{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12px);
+    width: 40px;
+    text-align: right;
+  }
+  .e-tel-img{
+    display: inline-block;
+    vertical-align: top;
+    height: 24px;
+    img{
+      width: auto;
+      max-height: 100%;
+    }
+  }
+}
+
+.b-photo{
+  @include block-style();
+  height: 500px;
+  @include bg();
+  margin: 30px 0;
+}
+
+.b-alert-container{
+  position: fixed;
+  top:20px;
+  left: 20px;
+  z-index: 20;
+}
+
+.b-alert{
+  padding: 20px 33px;
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: italic;
+  display: none;
+  @include block-style();
+  &+.b-alert{
+    margin-top: 20px;
+  }
+  &.active{
+    display: block;
   }
 }
 

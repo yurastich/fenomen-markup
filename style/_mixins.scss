@@ -387,11 +387,6 @@ html {
   &:after {
     transform: rotate(45deg);
   }
-  &:hover {
-    &:before, &:after {
-      background-color: $red;
-    }
-  }
   &.m-close-glob{
     @include transition-def();
     @include transition(all .3s);
@@ -401,6 +396,32 @@ html {
     &.m-close-visible{
       visibility: visible;
       opacity: 1;
+    }
+  }
+  &.m-close-sm{
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right: 10px;
+    &:before, &:after {
+      content:          "";
+      position:         absolute;
+      top: 0px;
+      left: 6px;
+      width:            3px;
+      height: 15px;
+      background-color: $yellow;
+      @include transition-def();
+    }
+    &:hover {
+      &:before, &:after {
+        background-color: $red;
+      }
+    }
+  }
+  &:hover {
+    &:before, &:after {
+      background-color: $red;
     }
   }
 }

@@ -64,6 +64,26 @@ $(document).ready(function () {
     speed: 200,
   });
 
+  $(".e-sf-item-s").click(function () {
+    var par = $(this).closest(".b-sf-list"),
+        items = par.find(".e-sf-item"),
+        item = $(this).closest(".e-sf-item"),
+        detail = item.find(".e-sf-item-f"),
+        details = par.find(".e-sf-item-f"),
+        actHave = item.hasClass("active");
+
+    if(actHave){
+      detail.slideUp();
+      item.removeClass("active");
+    }else{
+      items.removeClass("active");
+      details.slideUp();
+      item.addClass("active");
+      detail.slideDown();
+    }
+
+  });
+
 
   detailNum();
 
